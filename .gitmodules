@@ -1,0 +1,6 @@
+[submodule "src/rescue"]
+	path = src/rescue
+	url = git@github.com:XiaoLey/rescue.git
+[submodule "src/rapidjson"]
+	path = src/rapidjson
+	url = git@github.com:Tencent/rapidjson.git

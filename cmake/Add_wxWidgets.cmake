@@ -1,0 +1,6 @@
+CPMAddPackage(
+  NAME wxWidgets
+  GITHUB_REPOSITORY wxWidgets/wxWidgets
+  VERSION 3.2.2.1
+  OPTIONS "wxBUILD_SHARED OFF" "wxUSE_UNICODE ON" # "wxBUILD_TOOLKIT gtk3"
+)
