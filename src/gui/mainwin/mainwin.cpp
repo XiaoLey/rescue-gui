@@ -322,11 +322,12 @@ void MainWin::OnUpdateBtnClicked(wxCommandEvent &WXUNUSED(e))
 void MainWin::OnTreeListResItemActivated(wxTreeListEvent &e)
 {
     if (e.GetItem() == ui->m_treeListRes->GetFirstItem()) {
-        ConfigSet config(nullptr);
+        ConfigSet config(this);
         wxString functionPrefix = ui->m_treeListRes->GetItemText(ui->m_treeListRes->GetFirstItem());
         wxString sourcePath     = ui->m_treeListRes->GetItemText(ui->m_treeListRes->GetFirstItem(), 1);
         config.SetFunctionPrefix(functionPrefix);
         config.SetSourcePath(sourcePath);
+        config.Center();
         if (config.ShowModal() == wxID_OK) {
             config.GetFunctionPrefix(&functionPrefix);
             config.GetSourcePath(&sourcePath);
